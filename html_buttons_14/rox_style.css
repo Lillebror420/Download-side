@@ -1,0 +1,44 @@
+.html_buttons_14 {
+	background: linear-gradient(130deg, #B21D15 0%, #D1660F 30%, #EDA909 65%, #F0D90A 100%);
+	background: -webkit-linear-gradient(-40deg, #B21D15 0%, #D1660F 30%, #EDA909 65%, #F0D90A 100%);
+	background-position: left;
+	background-size: 150%;
+	border: 0 none;
+	border-radius: 5px;
+	box-sizing: border-box;
+	color: #FFFFFF;
+	cursor: pointer;
+	display: inline-block;
+	font: bold 18px Arial, Helvetica, sans-serif;
+	margin-top: 1px;
+	padding: 9px 35px 9px 35px;
+	position: relative;
+	text-align: center;
+	text-decoration: none;
+	text-shadow: none;
+	transition: all .2s ease-out;
+	overflow: hidden;
+}
+
+.red-shade {
+	background: url(red-shade.png) no-repeat right center;
+	height: 39px;
+	opacity: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+	transition: all .2s ease-out;
+	width: 60px;
+}
+
+.html_buttons_14:hover {
+	background-position: right;
+	text-decoration: none;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+	transition: all .2s ease-out;
+}
+
+.html_buttons_14:hover .red-shade {
+	opacity: 1;
+	transition: all .2s ease-out;
+}
