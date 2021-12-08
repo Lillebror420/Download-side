@@ -1,4 +1,4 @@
-.html_buttons_14 {
+.knap {
 	background: linear-gradient(130deg, #B21D15 0%, #D1660F 30%, #EDA909 65%, #F0D90A 100%);
 	background: -webkit-linear-gradient(-40deg, #B21D15 0%, #D1660F 30%, #EDA909 65%, #F0D90A 100%);
 	background-position: left;
@@ -31,14 +31,14 @@
 	width: 60px;
 }
 
-.html_buttons_14:hover {
+.knap:hover {
 	background-position: right;
 	text-decoration: none;
 	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
 	transition: all .2s ease-out;
 }
 
-.html_buttons_14:hover .red-shade {
+.knap:hover .red-shade {
 	opacity: 1;
 	transition: all .2s ease-out;
 }
