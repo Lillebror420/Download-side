@@ -1,4 +1,0 @@
-deployment:
-  tasks:
-    - export DEPLOYPATH=/home/lillebror/public_html/download/
-    - /bin/cp -R * $DEPLOYPATH
