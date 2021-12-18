@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,700');
+
+html{background:linear-gradient(to bottom, darkslateblue 0%,darkslategray 80%) no-repeat;height:100%;} /* for fun */
+body{margin:0;color:white;font-size:small;font-weight:400;font-family:Raleway,sans-serif;}
+body *{box-sizing:border-box;}
+
+img{display:block;margin:0 auto;border-radius:50%;border:5px solid white;width:100%;}
+
+button{width:30%;height:50px;border:none;padding:0;cursor:pointer;border:4px solid white;background:rgba(250,250,250, 0);transition:background .25s ease-in-out;margin:1vw auto;}
+button:hover{background:rgba(250,250,250,.35);transition:background .25s ease-in-out;}
+
+.container{display:flex;flex-direction:column;justify-content:center;width:20vw;margin:5% auto 0;}
+
+figure,figure>div,.container > div{display:block;margin:0 auto;}
+figure,.container > div{width:20vw;}
+
+figure>div{width:8vw;}
+
+progress{width:20vw;height:4px;border-radius:22px;display:block;margin:1em auto .2em;appearance:none;background:white;border:none;}
+progress::-moz-progress-bar{background-color:deeppink;}
+progress::-webkit-progress-value{background-color:deeppink;}
+progress::progress-bar{background-color:deeppink;}
+
+.container > div:first-of-type{position:relative;}
+.container > div:last-of-type{display:flex;flex-wrap:no-wrap;justify-content:center;}
+
+
+button:first-of-type{border-radius:22px 0 0 22px}
+button:last-of-type{border-radius:0 22px 22px 0;}
+
+svg{width:24px;position:relative;top:.15em;}
+use{fill:white}
+.onpause{visibility:hidden;}
+
+img,button,progress{box-shadow:0 3px 5px 2px rgba(51, 51, 51,.4);}
+
+figcaption{text-align:center;margin:1em 0;text-shadow:3px 5px 2px rgba(51,51,51,.4);}
+
+.bold{font-weight:700;}
+
+input[type=range]{
+  appearance:scroll-horizontal;
+  height:4px;
+  width:5vw;
+  background:white;
+  border:none;
+  position:absolute;
+  right:0;
+  top:5px;
+  cursor:pointer;
+}
+
+/*.container>div{display:none;visibility:hidden;}*/
+
+.loop{display:block;position:absolute;top:-8px;right:6vw;cursor:pointer}
