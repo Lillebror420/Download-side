@@ -11,13 +11,13 @@ button:hover{background:rgba(252, 193, 0, 0.4);transition:background .25s ease-i
 .container{display:flex;flex-direction:column;justify-content:center;width:20vw;margin:5% auto 0;}
 
 figure,figure>div,.container > div{display:block;margin:0 auto;}
-figure,.container > div{width:20vw;}
+figure,.container > div{width:25vw;}
 
 figure>div{width:25vw;
 align-content: center;
 }
 
-progress{width:20vw;height:4px;border-radius:22px;display:block;margin:1em auto .2em;appearance:none;background:rgb(252, 193, 0, 0.4);border:none;}
+progress{width:25vw;height:7px;border-radius:22px;display:block;margin:1em auto .2em;appearance:none;background:rgb(252, 193, 0, 0.4);border:none;}
 progress::-moz-progress-bar{background-color:deeppink;}
 progress::-webkit-progress-value{background-color:deeppink;}
 progress::progress-bar{background-color:deeppink;}
@@ -47,7 +47,7 @@ figcaption{text-align:center;}
 input[type=range]{
   appearance:scroll-horizontal;
   height:5px;
-  width:19vw;
+  width:25vw;
   background:rgb(252, 193, 0, 0.4);
   border:none;
   position:absolute;
@@ -78,13 +78,17 @@ body {
   #pfm_logo_bottom {
   margin-top: -10px;
   padding: 50px;
-  width: 250px;
-  height: 25px;
+  width: 450px;
+  height: 100px;
   align-content: center;
+  border: none;
+  box-shadow: none;
+  border-radius: 0%;
   }
   .sangtrackNextContainer {
   color: #E9B300;
   text-align: center;
+  padding: auto;
   font-size: 35px;
   font-weight: 800;
   font-family: 'verdana';
@@ -98,7 +102,4 @@ body {
   font-family: 'verdana';
   }
 
-  b {
-    font-size: large;
-  }
   
