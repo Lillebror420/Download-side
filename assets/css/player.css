@@ -2,10 +2,10 @@
 
 
 
-img{display:block;margin:0 auto;border-radius:100%;border:5px solid rgb(252, 193, 0, 0.4);width:100%;}
+img{display:block;margin:0 auto;border-radius:100%;border:5px solid rgb(252, 193, 0, 0.4);width:100%;align-content: center;}
 
 
-button{width:5000px;height:80px;border:none;padding:0;cursor:pointer;border:4px solid rgb(255, 255, 255);background:rgba(250,250,250, 0);transition:background .25s ease-in-out;margin:1vw auto;}
+button{width:5000%;height:80px;border:none;padding:0;cursor:pointer;border:4px solid rgb(255, 255, 255);background:rgba(250,250,250, 0);transition:background .25s ease-in-out;margin:1vw auto;}
 button:hover{background:rgba(252, 193, 0, 0.4);transition:background .25s ease-in-out;}
 
 .container{display:flex;flex-direction:column;justify-content:center;width:20vw;margin:5% auto 0;}
@@ -13,7 +13,9 @@ button:hover{background:rgba(252, 193, 0, 0.4);transition:background .25s ease-i
 figure,figure>div,.container > div{display:block;margin:0 auto;}
 figure,.container > div{width:20vw;}
 
-figure>div{width:8vw;}
+figure>div{width:25vw;
+align-content: center;
+}
 
 progress{width:20vw;height:4px;border-radius:22px;display:block;margin:1em auto .2em;appearance:none;background:rgb(252, 193, 0, 0.4);border:none;}
 progress::-moz-progress-bar{background-color:deeppink;}
@@ -31,7 +33,7 @@ svg{width:30px;position:relative;top:.15em;}
 use{fill:rgb(252, 193, 0, 0.4)}
 .onpause{visibility:hidden;}
 
-button,progress{box-shadow:0 3px 5px 2px rgba(252, 193, 0, 0.4);}
+img,button,progress{box-shadow:0 3px 5px 2px rgba(252, 193, 0, 0.4);}
 
 figcaption{text-align:center;}
 
@@ -44,8 +46,8 @@ figcaption{text-align:center;}
 
 input[type=range]{
   appearance:scroll-horizontal;
-  height:4px;
-  width:5vw;
+  height:5px;
+  width:19vw;
   background:rgb(252, 193, 0, 0.4);
   border:none;
   position:absolute;
