@@ -61,7 +61,7 @@ input[type=range]{
 .loop{display:block;position:absolute;top:-8px;right:6vw;cursor:pointer}
 
 body {
-  background: url('http://lillebror420.dk/uploads/zsk9f.png') repeat; margin: 0px; overflow-x: hidden;
+  background: url("http://lillebror420.dk/uploads/zsk9f.png") repeat; margin: 0px; overflow-x: hidden;
   margin-left: 0px;
   margin-top: 0px;
   margin-right: 0px;
