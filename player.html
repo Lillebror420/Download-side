@@ -6,14 +6,88 @@
   <meta name=" " content="En simpel side for Lillebror420's projekter.">
   <meta name="Skaber" content="Lillebror420">
   <link rel="shortcut icon" href="assets/images/gt_favicon.png">
-  <title>PartyFM Festen starter her...</title>
+  <title>PartyFM - Festen starter her...</title>
   <link rel="stylesheet" href="./player.css">
 
 </head>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+<script language="JavaScript">
+  window.resizeTo(screen.availWidth/3.2,screen.availHeight/1.55)
+</script>
+
+<script language="JavaScript">
+	
+  function updateNextTrack() {
+    $.ajax({cache: false, url:'https://partyfm.dk/title', timeout: 5000, success:function(data){
+      var newTrack = data;
+      var currentTrack = $("#sangNext").html();
+    
+      if(newTrack != currentTrack) {
+        //$("#nextTrack").fadeOut('slow',function(){ $(this).html(newTrack).fadeIn("slow"); });
+        $("##sangNext").fadeIn('slow',function(){ $(this).html(newTrack); });
+        console.log("[Webplayer][DEBUG] New info got on track ..")
+        } else {
+        console.log("[Webplayer][DEBUG] No information is giving")
+        }
+
+      $("#sangNext").load("https://partyfm.dk/title");
+      }			
+    })
+  }
+  
+updateNextTrack();
+setInterval(function() {
+  updateNextTrack();
+}, 5000);
+   
+  </script>	
+
+
+
 <body>
 
+ <style>
+ body {
+ background: url('https://i.imgur.com/sal9QsW.jpg') repeat; margin: 0px; overflow-x: hidden;
+ margin-left: 0px;
+ margin-top: 0px;
+ margin-right: 0px;
+ margin-bottom: 0px;
+ overflow: hidden;
+ }
+ .center {
+ text-align: center;
+ display: block;
+ margin-left: auto;
+ margin-right: auto;
+ width: 100%;
+ }
+ #pfm_logo_bottom {
+ margin-top: -10px;
+ padding: 50px;
+ width: 550px;
+ height: 125px;
+ align-content: center;
+ }
+ .sangtrackNextContainer {
+ color: #E9B300;
+ text-align: center;
+ font-size: 35px;
+ font-weight: 800;
+ font-family: 'verdana';
+ }
+ .sangtrackNext {
+ color: white;
+ text-align: center;
+ margin-top: 20px;
+ font-size: 26px;
+ font-weight: 500;
+ font-family: 'verdana';
+ }
+ </style>
+
 <svg style="display:none;">
-  <!-- icons credits: entypo.com -->
   <symbol id="play" viewBox="0 0 36 36">
     <path d="m 33.154281,18.002296 c 0,0.797303 -0.813303,1.370617 -0.813303,1.370617 L 9.5124564,33.513742 C 7.8485187,34.604368 6.4885677,33.796398 6.4885677,31.729806 V 4.27212 c 0,-2.0719249 1.359951,-2.8745617 3.0265577,-1.7866022 L 32.343646,16.631678 c -0.0026,0 0.810635,0.573312 0.810635,1.370618 z" />
   </symbol>
@@ -35,7 +109,7 @@
     <div>
       <img src="https://www.partyfm.dk/images/mediapack/logo/PFM_Logo_Yellow_Border_BG.png" alt="" />
     </div>
-    <figcaption><span class="bold">PartyFM</span>&nbsp;&ndash; Festen starter her</figcaption>
+    <figcaption><span class="bold">PartyFM </span>&nbsp;&ndash; Festen starter her...</figcaption>
     <audio controls src="http://stream.partyfm.dk/Party320/" id="track" class="track" preload="metadata" />
   </figure>
   <div>
@@ -68,6 +142,16 @@
         </div>
 </div>
 <!-- partial -->
+<div>
+  <div class="sangtrackNextContainer">
+    <span><b>NÆSTE SANG</b></span>
+    <br/>
+    <div class="sangtrackNext">
+      <span id="sangNext">  <br /></span>
+    </div>
+  </div>
+</div>
+
   <script  src="./player.js"></script>
 
 </body>

@@ -1,8 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway:400,700');
 
-html{background:linear-gradient(to bottom, darkslateblue 0%,darkslategray 80%) no-repeat;height:100%;} /* for fun */
-body{margin:0;color:white;font-size:small;font-weight:400;font-family:Raleway,sans-serif;}
-body *{box-sizing:border-box;}
+
 
 img{display:block;margin:0 auto;border-radius:50%;border:5px solid white;width:100%;}
 

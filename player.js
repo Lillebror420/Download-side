@@ -11,6 +11,8 @@ window.onload=function(){
     vol=document.querySelector('input'),
     pb=document.querySelector('progress');
 
+
+
  // non intrusive js on audio
  // remove controls and make it disappear
  track.removeAttribute('controls');
@@ -125,18 +127,5 @@ vol.addEventListener('input',function(){
   var span=document.querySelector('.loop');
   var olo=document.getElementById('onloop');
   
-  span.onclick=function(){
-    // loop working only on track
-    // not on stream
-    if(dur != 0){
-      if(track.loop === false){
-        track.loop=true;
-        olo.style.fill='chartreuse';
-      }
-      else{
-        track.loop=false;
-        olo.style.fill='white';
-      }
-    }
-  }
+
 }
