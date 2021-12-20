@@ -5,7 +5,7 @@
 img{display:block;margin:0 auto;border-radius:100%;border:5px solid rgb(252, 193, 0, 0.4);width:100%;}
 
 
-button{width:30%;height:50px;border:none;padding:0;cursor:pointer;border:4px solid rgb(255, 255, 255);background:rgba(250,250,250, 0);transition:background .25s ease-in-out;margin:1vw auto;}
+button{width:5000px;height:80px;border:none;padding:0;cursor:pointer;border:4px solid rgb(255, 255, 255);background:rgba(250,250,250, 0);transition:background .25s ease-in-out;margin:1vw auto;}
 button:hover{background:rgba(252, 193, 0, 0.4);transition:background .25s ease-in-out;}
 
 .container{display:flex;flex-direction:column;justify-content:center;width:20vw;margin:5% auto 0;}
@@ -27,15 +27,20 @@ progress::progress-bar{background-color:deeppink;}
 button:first-of-type{border-radius:22px 0 0 22px}
 button:last-of-type{border-radius:0 22px 22px 0;}
 
-svg{width:24px;position:relative;top:.15em;}
+svg{width:30px;position:relative;top:.15em;}
 use{fill:rgb(252, 193, 0, 0.4)}
 .onpause{visibility:hidden;}
 
-img,button,progress{box-shadow:0 3px 5px 2px rgba(252, 193, 0, 0.4);}
+button,progress{box-shadow:0 3px 5px 2px rgba(252, 193, 0, 0.4);}
 
-figcaption{text-align:center;margin:1em 0;text-shadow:3px 5px 2px rgba(252, 193, 0, 0.4);}
+figcaption{text-align:center;}
 
-.bold{font-weight:700;}
+
+.bold{
+  
+  font-weight:700;
+  color: rgba(252, 193, 0, 0.4);
+}
 
 input[type=range]{
   appearance:scroll-horizontal;
@@ -90,3 +95,8 @@ body {
   font-weight: 500;
   font-family: 'verdana';
   }
+
+  b {
+    font-size: large;
+  }
+  
