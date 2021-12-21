@@ -22,30 +22,27 @@
 </script>
 
 <script language="JavaScript">
-  function updateNextTrack() {
-    $.ajax({cache: false, url:'https://partyfm.dk/title', timeout: 5000, success:function(data){
-      var newTrack = data;
-      var currentTrack = $("#sangNext").html();
-    
-      if(newTrack != currentTrack) {
-        //$("#nextTrack").fadeOut('slow',function(){ $(this).html(newTrack).fadeIn("slow"); });
-        $("##sangNext").fadeIn('slow',function(){ $(this).html(newTrack); });
-        console.log("Ny sang info hentet ..")
-        } else {
-        console.log("Ingen info er fundet")
-        }
 
-      $("#sangNext").load("https://partyfm.dk/title");
-      }			
-    })
-  }
-  
-updateNextTrack();
-setInterval(function() {
-  updateNextTrack();
-}, 5000);
-   
-  </script>	
+      function updatesangNext() {
+         $.ajax({url:'https://partyfm.dk/title', timeout: 5000, success:function(data){
+           var newTrack = data;
+           var currentTrack = $("#sangNext").html();
+         
+           if(newTrack != currentTrack) {
+             $("#sangNext").fadeOut('slow',function(){ $(this).html(newTrack).fadeIn("slow"); });
+       }
+     
+         $("#sangNext").load("https://partyfm.dk/title");
+                 }
+         })
+       }
+       
+     updatesangNext();
+     setInterval(function() {
+       updatesangNext();
+     }, 5000);
+       
+   </script>
 
 
 
@@ -132,23 +129,17 @@ setInterval(function() {
 </style>
 <div>
   <div class="sangtrackNextContainer">
-    <span><b>NEXT SONG</b></span>
+    <span><b>Now Playing</b></span>
     <br/>
     <div class="sangtrackNext">
-      <span id="sangNext"> Future project <br /></span>
+      <span id="sangNext">  <br /></span>
     </div>
   </div>
 </div>
 <a href="https://partyfm.dk/" target="_blank"><img id="pfm_logo_bottom" src="assets/images/p_logo_bottom.png" alt="PartyFM logo"></a>
   <script  src="assets/js/player.js"></script>
 
-  <ul class="list-inline audio_list" style="margin:15px auto; text-align:center;">
-    <li class="list-inline-item text-muted">Kvalitet</li>
-    <li class="list-inline-item"><a class="stream" href="#" data-bitrate="128" data-location=" ">128kbps</a></li>
-    <li class="list-inline-item"><a class="stream streamActive" href="#" data-bitrate="192" data-location=" ">192kbps</a></li>
-    <li class="list-inline-item"><a class="stream" href="#" data-bitrate="256" data-location=" ">256kbps</a></li>
-    <li class="list-inline-item"><a class="stream" href="#" data-bitrate="320" data-location=" ">320kbps</a></li>
-  </ul>
+  
 
 </body>
 </html>
