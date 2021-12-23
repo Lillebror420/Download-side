@@ -15,6 +15,14 @@
         // Only needed if this page is going to be embedded on other websites
         parent: ["lillebror420.dk"]
       });
+
+      var embed = new Twitch.Embed('twitch-embed', {
+  channel: 'monstercat'
+});
+
+embed.addEventListener(Twitch.Embed.VIDEO_READY, function() {
+  console.log('The video is ready');
+});
     </script>
   </body>
 </html>
