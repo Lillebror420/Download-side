@@ -85,6 +85,12 @@ body {
   box-shadow: none;
   border-radius: 0%;
   }
+  #pfm_play, #pfm_stop, #pfm_mute {
+    align-content: center;
+    border: none;
+    box-shadow: none;
+    border-radius: 0%;
+    }
   .sangtrackNextContainer {
   color: #E9B300;
   text-align: center;
