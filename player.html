@@ -23,33 +23,6 @@
 </script>
 
 
-
-
-<script language="JavaScript">
-
-      function updatesangNext() {
-         $.ajax({url:'https://partyfm.dk/title', timeout: 5000, success:function(data){
-           var newTrack = data;
-           var currentTrack = $("#sangNext").html();
-         
-           if(newTrack != currentTrack) {
-             $("#sangNext").fadeOut('slow',function(){ $(this).html(newTrack).fadeIn("slow"); });
-       }
-     
-         $("#sangNext").load("https://partyfm.dk/title");
-                 }
-         })
-       }
-       
-     updatesangNext();
-     setInterval(function() {
-       updatesangNext();
-     }, 5000);
-       
-   </script>
-
-
-
 <body>
 
   <ul class="lightrope">
