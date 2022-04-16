@@ -55,7 +55,7 @@ window.onload=function(){
    if(track.paused === false){
      track.pause();
    }
-   track.currentTime=0;
+   player.currentTime=0;
    opl.style.visibility='visible';
    opl.style.fill='white';
    opa.style.visibility='hidden';
