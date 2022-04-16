@@ -91,15 +91,15 @@ body {
     box-shadow: none;
     border-radius: 0%;
     }
-  .sangtrackNextContainer {
-  color: #E9B300;
+  .sangtrackNPContainer {
+  color: #b8a60c;
   text-align: center;
   padding: auto;
   font-size: 25px;
   font-weight: 500;
   font-family: 'verdana';
   }
-  .sangtrackNext {
+  .sangtrackNP {
   color: white;
   text-align: center;
   margin-top: 20px;

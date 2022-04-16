@@ -11,6 +11,26 @@ window.onload=function(){
     vol=document.querySelector('input'),
     pb=document.querySelector('progress');
 
+    
+    function updateNP() {
+      $.ajax({url:'https://partyfm.dk/title', timeout: 5000, success:function(data){
+        var newTrack = data;
+        var currentTrack = $("#sangNP").html();
+      
+        if(newTrack != currentTrack) {
+          $("#sangNP").fadeOut('slow',function(){ $(this).html(newTrack).fadeIn("slow"); });
+    }
+  
+      $("#sangNP").load("https://partyfm.dk/title");
+              }
+      })
+    }
+    
+  updateNP();
+  setInterval(function() {
+    updateNP();
+  }, 5000);
+
 
 
  // non intrusive js on audio
