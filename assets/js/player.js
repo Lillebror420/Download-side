@@ -109,7 +109,7 @@ vol.addEventListener('input',function(){
      // if not streaming, set current time playing
      // duration is not 0 neither undefined
      if(dur !== 0 && isNaN(dur) === false){
-       pb.setAttribute('value',track.currentTime);
+       pb.setAttribute('value',player.currentTime);
        humanReadableTime(t[0],pb.value);
        t[0].innerHTML+='&nbsp;&gt; ';  
      } 
@@ -119,7 +119,7 @@ vol.addEventListener('input',function(){
   track.addEventListener('ended',function(){
     opl.style.fill='white';
     pb.setAttribute('value',0);
-    track.currentTime=0;
+    player.currentTime=0;
   });
   
   // loop controller
