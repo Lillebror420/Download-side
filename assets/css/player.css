@@ -78,24 +78,19 @@ body {
   #pfm_logo_bottom {
   margin-top: -10px;
   padding: 50px;
-  width: 250px;
-  height: 95px;
+  width: 450px;
+  height: 195px;
   align-content: center;
   border: none;
   box-shadow: none;
   border-radius: 0%;
   }
-  #pfm_play, #pfm_stop, #pfm_mute {
-    align-content: center;
-    border: none;
-    box-shadow: none;
-    border-radius: 0%;
-    }
+
   .sangtrackNPContainer {
   color: #b8a60c;
   text-align: center;
   padding: auto;
-  font-size: 25px;
+  font-size: 45px;
   font-weight: 500;
   font-family: 'verdana';
   }
@@ -103,7 +98,7 @@ body {
   color: white;
   text-align: center;
   margin-top: 20px;
-  font-size: 20px;
+  font-size: 30px;
   font-weight: 250;
   font-family: 'verdana';
   }
