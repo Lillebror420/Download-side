@@ -86,6 +86,30 @@ body {
   border-radius: 0%;
   }
 
+  #winamp {
+    margin-top: -90px;
+  padding: 50px;
+  width: 45px;
+  height: 45px;
+  align-content: center;
+  border: none;
+  box-shadow: none;
+  border: 3px solid #73AD21;
+  border-radius: 0%;
+  }
+
+  #itunes2 {
+    margin-top: -100px;
+    left: 30px;
+    padding: 50px;
+  width: 45px;
+  height: 45px;
+  
+  border: none;
+  box-shadow: none;
+  border-radius: 0%;
+  }
+
   .sangtrackNPContainer {
   color: #b8a60c;
   text-align: center;
