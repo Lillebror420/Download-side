@@ -14,64 +14,62 @@
     <link rel="stylesheet" href="assets/css/player.css">
 </head>
 <body>
-    <svg style="display:none;">
-        <symbol id="play" viewBox="0 0 36 36">
-            <path d="m 33.154281,18.002296 c 0,0.797303 -0.813303,1.370617 -0.813303,1.370617 L 9.5124564,33.513742 C 7.8485187,34.604368 6.4885677,33.796398 6.4885677,31.729806 V 4.27212 c 0,-2.0719249 1.359951,-2.8745617 3.0265577,-1.7866022 L 32.343646,16.631678 c -0.0026,0 0.810635,0.573312 0.810635,1.370618 z" />
-        </symbol>
-        <symbol id="pause" viewBox="0 0 36 36">
-            <path d="m 29.428572,1.9999996 h -4.571433 c -1.264,0 -2.285715,0.1097148 -2.285715,1.3714294 V 32.62857 c 0,1.261715 1.021715,1.37143 2.285715,1.37143 h 4.571433 c 1.264001,0 2.285716,-0.109723 2.285716,-1.37143 V 3.371429 c 0,-1.261715 -1.021715,-1.3714294 -2.285716,-1.3714294 z m -18.285718,0 H 6.5714244 c -1.2639997,0 -2.2857127,0.1097148 -2.2857127,1.3714294 V 32.62857 c 0,1.261715 1.021713,1.37143 2.2857127,1.37143 h 4.5714296 c 1.264,0 2.285715,-0.109723 2.285715,-1.37143 V 3.371429 c 0,-1.261715 -1.021715,-1.3714294 -2.285715,-1.3714294 z" />
-        </symbol>
-        <symbol id="mute" viewBox="0 0 36 36">
-            <path d="m 29.428572,1.9999996 h -4.571433 c -1.264,0 -2.285715,0.1097148 -2.285715,1.3714294 V 32.62857 c 0,1.261715 1.021715,1.37143 2.285715,1.37143 h 4.571433 c 1.264001,0 2.285716,-0.109723 2.285716,-1.37143 V 3.371429 c 0,-1.261715 -1.021715,-1.3714294 -2.285716,-1.3714294 z m -18.285718,0 H 6.5714244 c -1.2639997,0 -2.2857127,0.1097148 -2.2857127,1.3714294 V 32.62857 c 0,1.261715 1.021713,1.37143 2.2857127,1.37143 h 4.5714296 c 1.264,0 2.285715,-0.109723 2.285715,-1.37143 V 3.371429 c 0,-1.261715 -1.021715,-1.3714294 -2.285715,-1.3714294 z"  />
-        </symbol>
 
-        <symbol viewBox="0 0 36 36" id="loop">
-            <path d="m 34,14 v 11.2 c 0,1.7648 -1.4336,3.2 -3.2,3.2 H 5.2 C 3.4336,28.4 2,26.9648 2,25.2 V 14 C 2,12.2336 3.4336,10.8 5.2,10.8 H 16.4 V 7.6 l 6.4,5.6 -6.4,5.6 V 15.6 H 6.8 v 8 h 22.4 v -8 h -4.8 v -4.8 h 6.4 c 1.7664,0 3.2,1.4336 3.2,3.2 z" />
-        </symbol>
     </svg>
     <div class="container">
-        <select class="form-control">
-            <option>128 kpbs</option>
-            <option>256 kpbs</option>
-            <option>320 kpbs</option>
-        </select>
+       
         <figure id="player" class="audio">
+          <br></br>
+          <br></br>
             <div>
                 <img id="pfm_logo_top" src="https://www.partyfm.dk/images/mediapack/logo/PFM_Logo_Yellow_Border_BG.png" alt="PartyFM logo" />
             </div>
-            <figcaption><span class="bold"> </span>&nbsp;&ndash; </figcaption>
+                       
             <audio src="http://stream.partyfm.dk/Party320/" id="track" class="track" preload="metadata" />
         </figure>
         <div>
             <time class="bold"></time>&nbsp;<time></time>
 
             <input type="range" min="0" max="100" value="20" />
-            <progress value="0"></progress>
+            <br></br>
+            <br></br>
         </div>
 
-        
-        <div>
-            <button id="playbutt" type="button" class="play">
-                <svg viewBox="0 0 36 36">
-                    <use id="onplay" xlink:href="#play" class="onplay" />
-                </svg>
-            </button>
-
-            <button id="mutebutt" type="button" class="mute">
-                <svg viewBox="0 0 36 36">
-                    <use id="onmute" xlink:href="#mute" />
-                </svg>
-            </button>
-        </div>
-        <!-- partial -->
-        <div>
-          <div class="sangtrackNPcontainer">
-            <span><b>SPILLER NU</b></span>
-            <br/>
-            <div class="sangtrackNP">
-              <span id="sangNP">  <br /></span>
-            </div>
+        <audio id="pfm" >
+          <source src="https://stream1.partyfm.dk/Party320" type="audio/mpeg">
+        </audio>
+        <button onclick="change_stream('https://stream1.partyfm.dk/Party320');">Play 320</button>
+        <button onclick="change_stream('https://stream1.partyfm.dk/Party256');">Play 256</button>
+        <button onclick="change_stream('');">Stop</button>
+        <div id="player">
+            <div id="volume"></div>
           </div>
+          <script type="text/javascript">
+  
+            function change_stream(music)
+            {
+               
+              document.getElementById("pfm").pause();
+              document.getElementById("pfm").setAttribute('src', music);
+              document.getElementById("pfm").load();
+              document.getElementById("pfm").play();
+            }
+           var audio = document.getElementById("pfm");
+
+          
+         </script>
+        
+       
+        <!-- partial -->
+        <br></br>
+        <div>
+            <div class="sangtrackNPContainer">
+                <span><b>SPILLER NU</b></span>
+                <br/>
+                <div class="sangtrackNP">
+                    <span id="sangNP">  <br /></span>
+                </div>
+            </div>
         </div>
         <a href="https://partyfm.dk/" target="_blank">
             <img id="pfm_logo_bottom" src="assets/images/p_logo_bottom.png" alt="PartyFM logo">
