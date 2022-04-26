@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<head>
+<link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Slab&display=swap" rel="stylesheet">
+
+
+<link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons"/>
+<link rel="stylesheet" href="https://www.calkoo.com/css/jquery-ui.css"/>
+<link rel="stylesheet" href="//stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"/>
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous"/>
+<link rel="stylesheet" type="text/css" href="https://www.calkoo.com/style.css?version=1.0"/>
+</noscript>
+<link rel="shortcut icon" href="https://www.calkoo.com/favicon.ico" type="image/x-icon"/>
+</head>
+<body>
+<div class="mainarea container-fluid m-0">
+    <div class="row">
+    <div class="col-lg-8 content p-0 smartad-no-popunder">
+    <div class="calculator">
+    <script src="https://www.calkoo.com/js/stopwatchCalc.js"></script>
+    <script>document.write('');</script>
+    <noscript>
+    <p class="error"><img src="./images/alert.gif"> <b>Bemærk:</b> JavaScript skal være aktiveret!</p><br>
+    </noscript><div class="calc-containter">
+    <form name="stopwatchCalculator" id="stopwatchCalculator" onsubmit="return submitFunction();">
+    <div class="row">
+    <div class="col-sm-4 col-12 no-padding no-padding">Pris&nbsp;(pr. time)</div>
+    <div class="col-sm-6 col-12 no-padding"><input class="vis biginput R W120" id="pph" type="text" value="0.00" onClick="this.value = '';" onkeyup="stopwatchCalc();" /></div>
+    </div>
+    <div class="row">
+    <div class="col-sm-4 col-12 no-padding no-padding">Tid&nbsp;(hh:mm:ss)</div>
+    <div class="col-sm-6 col-12 no-padding"><input class="vis biginput R W150" id="time" onchange="stopwatchCalc();" onkeyup="stopwatchCalc();" /></div>
+    </div>
+    <div><br/></div>
+    <div class="row">
+    <div class="col-sm-4 col-12 no-padding no-padding"></div>
+    <div class="col-sm-6 col-12 no-padding">
+            <div class="handcursor"><!--img style="cursor: pointer;" onclick="window.start();" alt="Start" src="https://www.calkoo.com/images/button_start.png" width="32" height="32"-->&ensp;<button type="button" style="cursor: pointer;" onclick="window.start();" title="Start" class="btn btn-outline-success btn-lg btn-60"><i class="fa fa-play"></i></button></div>
+            <div class="handcursor"><!--img onclick="window.stop();stopwatchCalc();" alt="Stop" src="https://www.calkoo.com/images/button_pause.png" width="32" height="32"-->&emsp;<button type="button" style="cursor: pointer;" onclick="window.stop();stopwatchCalc();" title="Pause" class="btn btn-outline-secondary btn-lg btn-60" ><i class="fa fa-pause"></i></button></div>
+            <div class="handcursor"><!--img onclick="window.xreset();stopwatchCalc();" alt="Reset" src="https://www.calkoo.com/images/button_reset.png" width="32" height="32"-->&emsp;<button type="button" style="cursor: pointer;" onclick="window.xreset();stopwatchCalc();" title="Reset" class="btn btn-outline-danger btn-lg btn-60" ><i class="fa fa-fast-backward"></i></button></div>
+    </div>
+    </div>
+    <div><br/></div>
+    <div class="row">
+    <div class="col-sm-4 col-12 no-padding no-padding">Samlede honorar</div>
+    <div class="col-sm-6 col-12 no-padding"><input class="disabled vis biginput R W120" id="result" type="text" value="" onkeyup="stopwatchCalc();" /></div>
+    </div>
+    </form>
+    </div>
+</body>

@@ -138,12 +138,7 @@ input[type=range]{
 }
 /*.container>div{display:none;visibility:hidden;}*/
 
-#pfm_play, #pfm_stop, #pfm_mute {
-  align-content: center;
-  border: none;
-  box-shadow: none;
-  border-radius: 0%;
-}
+
 
 
 
