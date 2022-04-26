@@ -2,12 +2,9 @@ window.onload=function(){
     var track=document.getElementById('track'),
     ap=document.getElementById('player'),
     playButt=document.getElementById('playbutt'),
-    stopButt=document.getElementById('stopbutt'),
+    
     muteButt=document.getElementById('mutebutt'),
-    opl=document.getElementById('onplay'),
-    opa=document.getElementById('onpause'),
-    omu=document.getElementById('onmute'),
-    ost=document.getElementById('onstop'),
+   
     vol=document.querySelector('input'),
     pb=document.querySelector('progress'),
     muteimg = document.getElementById('muteimg'),
@@ -38,33 +35,35 @@ window.onload=function(){
             track.play();
             muteimg.style.display='block';
             playimg.style.display='none';
-            /* opl.style.visibility='hidden';
-            opl.style.fill='chartreuse';
-            opa.style.visibility='visible';
-            opa.style.fill='white';
-            ost.style.fill='white'; */
+
         } else {
             track.pause();
             muteimg.style.display='none';
             playimg.style.display='block';
-            /* opa.style.visibility='hidden';
-            opa.style.fill="chartreuse";
-            opl.style.visibility='visible';
-            opl.style.fill='white';
-            ost.style.fill='white'; */
+           
         }
     }
 
-    stopButt.onclick=function(){
-        if(track.paused === false){
-            track.pause();
-        }
-        track.currentTime=0;
-        opl.style.visibility='visible';
-        opl.style.fill='white';
-        opa.style.visibility='hidden';
-        ost.style.fill='chartreuse';
-    }
+    function updatesangNP() {
+        $.ajax({url:'https://partyfm.dk/title', timeout: 5000, success:function(data){
+          var newTrack = data;
+          var currentTrack = $("#sangNP").html();
+        
+          if(newTrack != currentTrack) {
+            $("#sangNP").fadeOut('fast',function(){ $(this).html(newTrack).fadeIn("fast"); });
+      }
+    
+        $("#sangNP").load("https://partyfm.dk/title");
+                }
+        })
+      }
+      
+    updatesangNP();
+    setInterval(function() {
+      updatesangNP();
+    }, 5000);
+
+    
     muteButt.onclick=function(){
         if(track.muted === false){
             track.muted=true;
