@@ -48,17 +48,26 @@ figure>div {
     width:25vw;
     align-content: center;
 }
-img{
-    display:block;margin:0 auto;border-radius:100%;border:5px solid rgb(252, 193, 0, 0.4);
-    width:100%;align-content: center;
+figure img{
+    display:block;
+    margin:0 auto;
+    border-radius:100%;
+    border:5px solid #fcc10066;
+    width:100%;
+    align-content: center;
+    box-shadow:0 3px 5px 2px rgba(252, 193, 0, 0.4);
 }
 button{
-    width:32%;
-    height:60px;border:none;padding:0;cursor:pointer;
+    width:100%;
+    height:60px;
+    border:none;
+    padding:0;
+    cursor:pointer;
     border:4px solid rgb(255, 255, 255);
     background:rgba(250,250,250, 0);
     transition:background .25s ease-in-out;
     margin:1vw auto;
+    border-radius: 22px;
 }
 button:hover{
     background:rgba(252, 193, 0, 0.4);transition:background .25s ease-in-out;
@@ -85,8 +94,8 @@ progress::progress-bar{
     flex-wrap:no-wrap;
     justify-content:center;
 }
-button:first-of-type{border-radius:22px 0 0 22px}
-button:last-of-type{border-radius:0 22px 22px 0;}
+/* button:first-of-type{border-radius:22px 0 0 22px}
+button:last-of-type{border-radius:0 22px 22px 0;} */
 
 svg{
     width:25px;
@@ -96,7 +105,7 @@ svg{
 use{fill:rgb(252, 193, 0, 0.4)}
 .onpause{visibility:hidden;}
 
-img,button,progress{box-shadow:0 3px 5px 2px rgba(252, 193, 0, 0.4);}
+button,progress{box-shadow:0 3px 5px 2px rgba(252, 193, 0, 0.4);}
 
 figcaption{text-align:center;}
 
@@ -115,7 +124,7 @@ input[type=range]{
     font-weight:700;
     color: rgba(252, 193, 0, 0.4);
 }
-.sangtrackNPContainer {
+.sangtrackNextContainer {
     color: #E9B300;
     text-align: center;
     padding: auto;
@@ -123,7 +132,7 @@ input[type=range]{
     font-weight: 500;
     font-family: 'verdana';
 }
-.sangtrackNP {
+.sangtrackNext {
     color: white;
     text-align: center;
     margin-top: 20px;
@@ -138,10 +147,16 @@ input[type=range]{
 }
 /*.container>div{display:none;visibility:hidden;}*/
 
+/*
 
 
-
-
+.center {
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
 #pfm_logo_bottom {
     margin-top: -10px;
     padding: 50px;
@@ -152,3 +167,10 @@ input[type=range]{
     box-shadow: none;
     border-radius: 0%;
 }
+#pfm_play, #pfm_stop, #pfm_mute {
+    align-content: center;
+    border: none;
+    box-shadow: none;
+    border-radius: 0%;
+}
+ */
