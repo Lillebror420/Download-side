@@ -31,16 +31,24 @@ window.onload=function(){
     }
   
     playButt.onclick=function(){
-        if(track.paused === true){
+        //console.log(track.paused);
+        if (track.paused) {
             track.play();
+            track.muted=false;
             muteimg.style.display='block';
             playimg.style.display='none';
-
         } else {
-            track.pause();
-            muteimg.style.display='none';
-            playimg.style.display='block';
-           
+            if(track.muted === true){
+                track.muted=false;
+                muteimg.style.display='block';
+                playimg.style.display='none';
+    
+            } else if(track.muted === false) {
+                track.muted=true;
+                muteimg.style.display='none';
+                playimg.style.display='block';
+               
+            }
         }
     }
 
@@ -64,19 +72,18 @@ window.onload=function(){
     }, 5000);
 
     
-    muteButt.onclick=function(){
+    /*muteButt.onclick=function(){
         if(track.muted === false){
             track.muted=true;
-            /* omu.style.fill='coral'; */
+            
             muteimg.style.display='none';
             playimg.style.display='block';
         } else {
             track.muted=false;
-            /* omu.style.fill='white'; */
             muteimg.style.display='block';
             playimg.style.display='none';
         }
-    }
+    }*/
     // volume slider
     vol.addEventListener('input',function(){
         var v=vol.value;
