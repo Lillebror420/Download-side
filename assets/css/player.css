@@ -14,7 +14,7 @@ body {
     width:27vw;
     margin: 0;
     position: absolute;
-    top: 40%;
+    top: 30%;
     left: 50%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
@@ -134,7 +134,12 @@ input[type=range]{
     font-weight: 500;
     font-family: 'verdana';
     position: absolute;
-    top: 350px;
+    top: 80%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+
 }
 .sangtrackNP {
     color: white;
