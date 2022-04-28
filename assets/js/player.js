@@ -10,16 +10,10 @@ window.onload=function(){
     muteimg = document.getElementById('muteimg'),
     playimg = document.getElementById('playimg');
 
-
-    // non intrusive js on audio
-    // remove controls and make it disappear
     track.removeAttribute('controls');
-    //track.style.display='none';
-    // make visible div elements for custom player
     divs=document.querySelector('.container').children;
     divs[1].style.display='block';
     divs[1].style.visibility='visible';
-    /* divs[2].style.display='flex'; */
     divs[2].style.visibility='visible';
   
     function humanReadableTime(el,v){
@@ -31,7 +25,7 @@ window.onload=function(){
     }
   
     playButt.onclick=function(){
-        //console.log(track.paused);
+        console.log(track.paused);
         if (track.paused) {
             track.play();
             track.muted=false;
@@ -72,18 +66,7 @@ window.onload=function(){
     }, 5000);
 
     
-    /*muteButt.onclick=function(){
-        if(track.muted === false){
-            track.muted=true;
-            
-            muteimg.style.display='none';
-            playimg.style.display='block';
-        } else {
-            track.muted=false;
-            muteimg.style.display='block';
-            playimg.style.display='none';
-        }
-    }*/
+    
     // volume slider
     vol.addEventListener('input',function(){
         var v=vol.value;
@@ -91,11 +74,9 @@ window.onload=function(){
         track.volume=v / 100;
         if(v === 0){
             track.muted=true;
-            /* omu.style.fill='coral'; */
         }
         else if(v > 0 && track.muted === true){
             track.muted=false;
-            /* omu.style.fill='white'; */
         }
     });
 
@@ -130,16 +111,9 @@ window.onload=function(){
     }
     // reset if end of track
     track.addEventListener('ended',function(){
-        /* opl.style.fill='white'; */
         pb.setAttribute('value',0);
         track.currentTime=0;
     });
-  
-    // loop controller
-    // span container to make click on loop button easier
-    var span=document.querySelector('.loop');
-    var olo=document.getElementById('onloop');
-
 }
 
 $(document).on('change' , '#volume' , function () {
@@ -147,10 +121,8 @@ $(document).on('change' , '#volume' , function () {
     track.volume=v / 100;
     if(v === 0){
         track.muted=true;
-        /* omu.style.fill='coral'; */
     }
     else if(v > 0 && track.muted === true){
         track.muted=false;
-        /* omu.style.fill='white'; */
     }
 });
