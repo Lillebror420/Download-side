@@ -15,6 +15,8 @@ window.onload=function(){
     divs[1].style.display='block';
     divs[1].style.visibility='visible';
     divs[2].style.visibility='visible';
+
+   
   
     function humanReadableTime(el,v){
 	    var s = parseInt(v % 60);
