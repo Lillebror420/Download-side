@@ -826,3 +826,35 @@ xpush
   }
 }
 
+.sangtrackNPContainer {
+  color: #E9B300;
+  text-align: center;
+  padding: auto;
+  font-size: 25px;
+  font-weight: 500;
+  font-family: 'verdana';
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+
+}
+.sangtrackNP {
+  color: white;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: 250;
+  font-family: 'verdana';
+}
+
+.lytmed, .klikher {
+  color:  #E9B300;
+  text-align: center;
+  margin-top: 25px;
+  font-size: 20px;
+  font-weight: 250;
+  font-family: 'verdana';
+}

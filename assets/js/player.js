@@ -50,11 +50,11 @@ window.onload=function(){
 
     function updatesangNP() {
         $.ajax({url:'https://partyfm.dk/title', timeout: 5000, success:function(data){
-          var newTrack = data;
-          var currentTrack = $("#sangNP").html();
+          var nextPlay = data;
+          var nowPlay = $("#sangNP").html();
         
-          if(newTrack != currentTrack) {
-            $("#sangNP").fadeOut('fast',function(){ $(this).html(newTrack).fadeIn("fast"); });
+          if(nextPlay != nowPlay) {
+            $("#sangNP").fadeOut('slow',function(){ $(this).html(nextPlay).fadeIn("slow"); });
       }
     
         $("#sangNP").load("https://partyfm.dk/title");

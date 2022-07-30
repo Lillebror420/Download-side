@@ -151,4 +151,22 @@ jQuery(document).ready(function($){
 		$oldWord.removeClass('is-visible').addClass('is-hidden');
 		$newWord.removeClass('is-hidden').addClass('is-visible');
 	}
+	function updatesangNP() {
+        $.ajax({url:'https://partyfm.dk/title', timeout: 5000, success:function(data){
+          var newTrack = data;
+          var currentTrack = $("#sangNP").html();
+        
+          if(newTrack != currentTrack) {
+            $("#sangNP").fadeOut('fast',function(){ $(this).html(newTrack).fadeIn("fast"); });
+      }
+    
+        $("#sangNP").load("https://partyfm.dk/title");
+                }
+        })
+      }
+      
+    updatesangNP();
+    setInterval(function() {
+      updatesangNP();
+    }, 5000);
 });
