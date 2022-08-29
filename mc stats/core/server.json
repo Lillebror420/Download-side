@@ -1,0 +1,36 @@
+{
+    "server-name":"MundoPixels",
+	"server-ip":"mc.mundopixels.net",
+	"server-port":"25565",
+	"show-servers":true,
+    "servers":
+	[
+		{
+			"title":"Lobby",
+			"stats-name":"lobby",
+			"version":"1.8.x"
+		},
+		{
+			"title":"KitPVP",
+			"stats-name":"kitpvp",
+			"version":"1.8.8 - 1.16.x"
+		},
+		{
+			"title":"SkyWars",
+			"stats-name":"skywars",
+			"version":"1.8.8 - 1.16.x"
+		},
+		{
+			"title":"MiniGames",
+			"stats-name":"minigames",
+			"version":"1.8.8 - 1.16.x"
+		},
+		{
+			"title":"Survival",
+			"stats-name":"survival",
+			"version":"1.16.x"
+		}
+	]
+}
+
+

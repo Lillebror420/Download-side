@@ -1,0 +1,22 @@
+[
+    {
+        "name":"Total Players:",
+        "stats":"player",
+		"type":"records"
+    },
+    {
+        "name":"Total Credits:",
+        "stats":"supercredits_credits",
+		"type":"integer"
+    },
+	{
+        "name":"Total Votes:",
+        "stats":"votingplugin_alltimetotal",
+		"type":"integer"
+    },
+	{
+        "name":"Total Referrals:",
+        "stats":"rs_referrals",
+		"type":"integer"
+    }
+]

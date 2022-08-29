@@ -1,0 +1,56 @@
+[
+    {
+        "title":"Top Credits",
+		"name":"Credits",
+        "stats":"supercredits_credits",
+		"server":"all"
+    },
+    {
+        "title":"Top Votes",
+		"name":"Votes",
+        "stats":"votingplugin_alltimetotal",
+		"server":"all"
+    },
+	{
+        "title":"Top Referrals",
+		"name":"Referrals",
+        "stats":"rs_referrals",
+		"server":"all"
+    },
+	{
+        "title":"Top Money [Survival]",
+		"name":"Money",
+        "stats":"vault_eco_balance",
+		"server":"all"
+    },
+	{
+        "title":"Top Kills [Survival]",
+		"name":"Kills",
+        "stats":"statistic_player_kills",
+		"server":"survival"
+    },
+	{
+        "title":"Top Kills [KitPVP]",
+		"name":"Kills",
+        "stats":"kitbattle_kills",
+		"server":"all"
+    },
+	{
+        "title":"Top Wins [Skywars]",
+		"name":"Wins",
+        "stats":"coreskywars_wins",
+		"server":"all"
+    },
+	{
+        "title":"Top Wins [Minigames]",
+		"name":"Wins",
+        "stats":"coreminigames_wins",
+		"server":"all"
+    },
+	{
+        "title":"Top Wins [BuildBattle]",
+		"name":"Wins",
+        "stats":"buildbattle_wins",
+		"server":"all"
+    }
+]
