@@ -70,6 +70,7 @@ button{
     transition:background .25s ease-in-out;
     margin:1vw auto;
     border-radius: 22px;
+    z-index: 1;
 }
 button:hover{
     background:rgba(252, 193, 0, 0.4);transition:background .25s ease-in-out;
@@ -154,3 +155,48 @@ input[type=range]{
         width: 70%;
     }
 }
+
+
+input#volume {
+    appearance: none;
+    height: 10px;
+    width: 27vw;
+    background: rgba(252, 193, 0, 0.1);
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+}
+
+input#volume::-webkit-slider-thumb {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #E9B300;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+}
+
+input#volume::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: #E9B300;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#volumeText {
+    position: absolute;
+    top: 60px; /* Juster top-marginen efter behov */
+    left: 50%;
+    transform: translateX(-50%);
+    color: #E9B300;
+    font-size: 14px;
+    font-weight: bold;
+    z-index: 2;
+}
+
