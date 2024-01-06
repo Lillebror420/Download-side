@@ -26,27 +26,33 @@ window.onload=function(){
         el.innerHTML = m + ':' + s ;
     }
   
-    playButt.onclick=function(){
-        console.log(track.paused);
-        if (track.paused) {
-            track.play();
-            track.muted=false;
-            muteimg.style.display='block';
-            playimg.style.display='none';
-        } else {
-            if(track.muted === true){
-                track.muted=false;
-                muteimg.style.display='block';
-                playimg.style.display='none';
+    playButt.onclick = function () {
+        console.log("Play button clicked");
     
-            } else if(track.muted === false) {
-                track.muted=true;
-                muteimg.style.display='none';
-                playimg.style.display='block';
-               
+        if (track.src) {
+            console.log("Track source: " + track.src);
+    
+            if (track.paused) {
+                track.play();
+                track.muted = false;
+                muteimg.style.display = 'block';
+                playimg.style.display = 'none';
+            } else {
+                if (track.muted === true) {
+                    track.muted = false;
+                    muteimg.style.display = 'block';
+                    playimg.style.display = 'none';
+                } else if (track.muted === false) {
+                    track.muted = true;
+                    muteimg.style.display = 'none';
+                    playimg.style.display = 'block';
+                }
             }
+        } else {
+            console.error("Error: Track source is not set.");
         }
-    }
+    };
+    
 
     function updatesangNP() {
         $.ajax({
