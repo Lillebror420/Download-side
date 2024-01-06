@@ -70,17 +70,29 @@ window.onload=function(){
     
     
     // volume slider
-    vol.addEventListener('input',function(){
-        var v=vol.value;
+    vol.addEventListener('input', function () {
+        var v = vol.value;
         console.log(v);
-        track.volume=v / 100;
-        if(v === 0){
-            track.muted=true;
-        }
-        else if(v > 0 && track.muted === true){
-            track.muted=false;
+        track.volume = v / 100;
+    
+        // Opdater volumenprocenten på siden
+        updateVolumePercentage(v);
+    
+        if (v === 0) {
+            track.muted = true;
+        } else if (v > 0 && track.muted === true) {
+            track.muted = false;
         }
     });
+    
+    function updateVolumePercentage(volume) {
+        // Tilføj logik her for at opdatere volumenprocenten på siden
+        var volumeText = document.getElementById('volumeText');
+        if (volumeText) {
+            volumeText.textContent = 'Volume: ' + volume + '%';
+        }
+    }
+    
 
     // time elements
     var t=divs[1].children;
