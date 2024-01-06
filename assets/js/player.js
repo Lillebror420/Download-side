@@ -49,23 +49,32 @@ window.onload=function(){
     }
 
     function updatesangNP() {
-        $.ajax({url:'https://partyfm.dk/title', timeout: 5000, success:function(data){
-          var nextPlay = data;
-          var nowPlay = $("#sangNP").html();
-        
-          if(nextPlay != nowPlay) {
-            $("#sangNP").fadeOut('slow',function(){ $(this).html(nextPlay).fadeIn("slow"); });
-      }
+        $.ajax({
+            url: 'https://partyfm.dk/title',
+            timeout: 5000,
+            success: function (data) {
+                var nextPlay = data;
+                var nowPlay = $("#sangNP").html();
     
-        $("#sangNP").load("https://partyfm.dk/title");
+                // Fjern '- PartyFM.dk' fra sangtitlen
+                const songTitle = nextPlay.replace(' - PartyFM.dk', '');
+    
+                if (songTitle != nowPlay) {
+                    $("#sangNP").fadeOut('slow', function () {
+                        $(this).html(songTitle).fadeIn("slow");
+                    });
                 }
-        })
-      }
-      
+    
+                $("#sangNP").load("https://partyfm.dk/title");
+            }
+        });
+    }
+    
     updatesangNP();
-    setInterval(function() {
-      updatesangNP();
+    setInterval(function () {
+        updatesangNP();
     }, 5000);
+    
 
     
     
